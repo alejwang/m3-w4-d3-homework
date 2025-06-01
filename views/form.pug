@@ -1,0 +1,48 @@
+extends layout
+
+block content
+    -data = data || {}
+
+    section#intro-text
+        span Simple Kitchen
+        h3
+            | Simple &amp; Comforting 
+            br
+            |             Recipes All Year Round
+        p Pan-seared chicken, Grill shrimp, mac &amp; cheese&mdash;need we say more?
+        //
+            <p class="success">SUCCESS</p>
+            <p class="error">ERROR</p>
+            <p class="warning">WARNING</p>
+        button.submit-buttton View Recipes
+
+    section#intro-image
+        if errors
+            ul.my-errors
+                for error in errors
+                    li= error.msg
+        h1 Register to Subscribe
+        form(action="." method="POST" class="form-registration")
+            label(for="name") Name:
+            input(
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                value=data.name
+            )
+
+            label(for="email") Email:
+            input(
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                value=data.email
+            )
+
+            input(
+                type="submit" 
+                value="Submit"
+                class="btn btn-lg btn-primary btn-block"
+            )

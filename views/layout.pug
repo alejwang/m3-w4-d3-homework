@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title= `${title}`
+    //- link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/form.css')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+    link(rel='StyleSheet' href='css/styles.css' type='text/css')
+    link(rel='StyleSheet' href='css/registration.css' type='text/css')
+    //- script(src='script.js')
+
+  body
+    header
+      nav
+        ul
+          li
+            a(href='/') Home
+          li |
+          li
+            a(href='#') Blog
+          span
+            li
+              a(href='/register') Register
+    main
+      block content
+
+
+  footer
+    //- &copy; Copyright 2022
+
+      
+      
